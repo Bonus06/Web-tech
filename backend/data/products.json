@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Nordic Chair",
+    "price": 50,
+    "category": "chair",
+    "image": "images/product-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Nordic Chair",
+    "price": 50,
+    "category": "chair",
+    "image": "images/product-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Kruzo Aero Chair",
+    "price": 78,
+    "category": "chair",
+    "image": "images/product-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Ergonomic Chair",
+    "price": 43,
+    "category": "chair",
+    "image": "images/product-1.png"
+  }
+]
