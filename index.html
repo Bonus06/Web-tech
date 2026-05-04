@@ -1,0 +1,796 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="shop.html">Shop</a></li>
+						<li><a class="nav-link" href="about.html">About us</a></li>
+						<li><a class="nav-link" href="services.html">Services</a></li>
+						<li><a class="nav-link" href="blog.html">Blog</a></li>
+						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+					</ul>
+
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                        <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
+                        <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+                        <li>
+                            <button id="search-toggle" class="btn btn-sm btn-outline-light ms-2" aria-label="Search">
+                                <span class="fa fa-search"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                
+        </nav>
+        <!-- End Header/Navigation -->
+        
+        <!-- Search overlay (inserted) -->
+        <div id="search-overlay" class="search-overlay" aria-hidden="true" style="display:none;">
+            <div class="search-overlay-inner" style="max-width:900px;margin:40px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.2);">
+                <button id="search-close" class="search-close" aria-label="Close" style="float:right;border:0;background:transparent;font-size:28px;line-height:1;">&times;</button>
+                <h4>ค้นหาสินค้า</h4>
+                <form id="search-form" class="d-flex mb-3" onsubmit="return false;">
+                    <input id="search-input" type="search" class="form-control me-2" placeholder="พิมพ์ชื่อสินค้า เช่น 'Chair'" autocomplete="off" style="flex:1;">
+                    <button id="search-go" class="btn btn-primary">ค้นหา</button>
+                </form>
+                <div id="search-results" style="display:block;"></div>
+            </div>
+        </div>
+        <!-- End Search overlay -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
+								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<img src="images/couch.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+
+		<!-- Start Product Section -->
+		<div class="product-section">
+			<div class="container">
+				<div class="row">
+
+					<!-- Start Column 1 -->
+					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+						<h2 class="mb-4 section-title">Crafted with excellent material.</h2>
+						<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
+						<p><a href="shop.html" class="btn">Explore</a></p>
+					</div> 
+					<!-- End Column 1 -->
+
+					<!-- Start Column 2 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="cart.html">
+							<img src="images/product-1.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Nordic Chair</h3>
+							<strong class="product-price">$50.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div> 
+					<!-- End Column 2 -->
+
+					<!-- Start Column 3 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="cart.html">
+							<img src="images/product-2.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Kruzo Aero Chair</h3>
+							<strong class="product-price">$78.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 3 -->
+
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="cart.html">
+							<img src="images/product-3.png" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Ergonomic Chair</h3>
+							<strong class="product-price">$43.00</strong>
+
+							<span class="icon-cross">
+								<img src="images/cross.svg" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 4 -->
+
+				</div>
+			</div>
+		</div>
+		<!-- End Product Section -->
+
+		<!-- Start Why Choose Us Section -->
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-6">
+						<h2 class="section-title">Why Choose Us</h2>
+						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/truck.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Fast &amp; Free Shipping</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/bag.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Easy to Shop</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/support.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>24/7 Support</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/return.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Hassle Free Returns</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="img-wrap">
+							<img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section -->
+
+		<!-- Start We Help Section -->
+		<div class="we-help-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-7 mb-5 mb-lg-0">
+						<div class="imgs-grid">
+							<div class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
+							<div class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
+							<div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
+						</div>
+					</div>
+					<div class="col-lg-5 ps-lg-5">
+						<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
+						<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+
+						<ul class="list-unstyled custom-list my-4">
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+						</ul>
+						<p><a herf="#" class="btn">Explore</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End We Help Section -->
+
+		<!-- Start Popular Product -->
+		<div class="popular-product">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-1.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Nordic Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-2.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Kruzo Aero Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-3.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Ergonomic Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Popular Product -->
+
+		<!-- Start Testimonial Slider -->
+		<div class="testimonial-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 mx-auto text-center">
+						<h2 class="section-title">Testimonials</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="testimonial-slider-wrap text-center">
+
+							<div id="testimonial-nav">
+								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+							</div>
+
+							<div class="testimonial-slider">
+								
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Testimonial Slider -->
+
+		<!-- Start Blog Section -->
+		<div class="blog-section">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-md-6">
+						<h2 class="section-title">Recent Blog</h2>
+					</div>
+					<div class="col-md-6 text-start text-md-end">
+						<a href="#" class="more">View All Posts</a>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">First Time Home Owner Ideas</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Blog Section -->	
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<img src="images/sofa.png" alt="Image" class="img-fluid">
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Knowledge base</a></li>
+									<li><a href="#">Live chat</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Our team</a></li>
+									<li><a href="#">Leadership</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Nordic Chair</a></li>
+									<li><a href="#">Kruzo Aero</a></li>
+									<li><a href="#">Ergonomic Chair</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
+            </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+		<script>
+  // แทนที่โค้ด dummy เดิม: อย่าใส่ submit handler ซ้ำ
+  const searchToggle = document.getElementById('search-toggle');
+  const searchClose = document.getElementById('search-close');
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchInput = document.getElementById('search-input');
+
+  searchToggle && searchToggle.addEventListener('click', function() {
+    if (searchOverlay) {
+      searchOverlay.style.display = 'block';
+      searchOverlay.setAttribute('aria-hidden', 'false');
+    }
+    searchInput && searchInput.focus();
+  });
+
+  searchClose && searchClose.addEventListener('click', function() {
+    if (searchOverlay) {
+      searchOverlay.style.display = 'none';
+      searchOverlay.setAttribute('aria-hidden', 'true');
+    }
+  });
+</script>
+
+    <style>
+    /* เล็กน้อยสำหรับผลลัพธ์การค้นหา */
+    .search-results-grid{display:flex;flex-wrap:wrap;gap:12px}
+    .search-result{display:flex;align-items:center;gap:12px;padding:8px;border:1px solid #eee;border-radius:6px;width:100%;}
+    .search-result img{width:72px;height:72px;object-fit:cover;border-radius:4px;}
+    .search-result .meta{display:flex;flex-direction:column;}
+    .search-no{padding:12px;color:#666;}
+    @media(min-width:576px){ .search-result{width:48%} }
+    @media(min-width:992px){ .search-result{width:31%} }
+
+    /* ซ่อนปุ่มวงกลมสีดำ (floating +) ถ้ามี */
+    .product-item .floating-add,
+    .product-item .fab,
+    .product-item .icon-plus,
+    .product-item .plus,
+    .product-item .product-plus,
+    .product-item .add-fab,
+    .product-item .circle-plus {
+      display: none !important;
+    }
+
+    /* ทำให้แอนเคอร์ของสินค้ามี position relative เพื่อให้ปุ่มวางตำแหน่งได้ */
+    .product-item { position: relative; overflow: visible; }
+
+    /* ปรับปุ่ม Add to cart ให้ไปอยู่ตรงกลางล่างของการ์ด (แทนปุ่มวงกลมดำ) */
+    .add-to-cart-btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px; /* ปรับตามต้องการ */
+      z-index: 5;
+      padding: .6rem 1.4rem;
+      border-radius: 40px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* เว้นระยะให้การ์ดไม่ตัดปุ่มที่ยื่นออกมา */
+    .col-12.col-md-4.col-lg-3 { padding-bottom: 30px; }
+
+    </style>
+
+    <script>
+    (function(){
+      const CART_KEY = 'furni_cart_v1';
+
+      function loadCart(){
+        try {
+          return JSON.parse(localStorage.getItem(CART_KEY)) || {};
+        } catch (e) { return {}; }
+      }
+
+      function saveCart(cart){
+        try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+        catch (e) { console.warn('saveCart', e); }
+      }
+
+      function cartCount(cart){
+        return Object.values(cart).reduce((s, it) => s + (it.qty || 0), 0);
+      }
+
+      function renderCartCount(){
+        const cart = loadCart();
+        const count = cartCount(cart);
+        const cartAnchor = document.querySelector('a[href="cart.html"]');
+        if(!cartAnchor) return;
+        let badge = document.getElementById('cart-count');
+        if(!badge){
+          badge = document.createElement('span');
+          badge.id = 'cart-count';
+          cartAnchor.appendChild(badge);
+        }
+        badge.textContent = count;
+        badge.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+
+      function parsePrice(text){
+        if(!text) return 0;
+        const cleaned = String(text).replace(/[^0-9\.,-]/g, '').replace(/,/g, '');
+        return parseFloat(cleaned) || 0;
+      }
+
+      function addToCartItem(item){
+        const cart = loadCart();
+        const id = item.id;
+        if(!id) return;
+        if(!cart[id]) cart[id] = { ...item, qty: 0 };
+        cart[id].qty = (cart[id].qty || 0) + 1;
+        saveCart(cart);
+        renderCartCount();
+      }
+
+      // สแกน .product-item บนเพจ แล้วเพิ่มปุ่ม "Add to cart"
+      function attachAddButtons(){
+        document.querySelectorAll('.product-item').forEach((el, idx) => {
+          // ให้แน่ใจว่า root มี position:relative (กำหนดด้วย CSS ข้างบน)
+          if(!el.dataset.pid) {
+            const title = (el.querySelector('.product-title')?.textContent || ('product-' + idx)).trim();
+            el.dataset.pid = title.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9\-]/g,'') || ('p-'+idx);
+          }
+          // ถ้ามีปุ่มแล้วข้าม
+          if(el.querySelector('.add-to-cart-btn')) return;
+
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn btn-primary add-to-cart-btn';
+          btn.textContent = 'Add to cart';
+
+          btn.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            const title = (el.querySelector('.product-title')?.textContent || '').trim();
+            const img = el.querySelector('img')?.src || '';
+            const priceText = (el.querySelector('.product-price')?.textContent || el.querySelector('strong')?.textContent || '').trim();
+            const price = parsePrice(priceText);
+            const id = el.dataset.pid;
+
+            addToCartItem({ id, name: title, price, image: img });
+            const prev = btn.textContent;
+            btn.textContent = 'Added';
+            setTimeout(()=> btn.textContent = prev, 700);
+          });
+
+          // เพิ่มปุ่มเข้าไปเป็นลูกของ .product-item (ตำแหน่ง absolute ถูกกำหนดด้วย CSS)
+          el.appendChild(btn);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        attachAddButtons();
+        renderCartCount();
+      });
+
+      window.furniCart = {
+        load: loadCart,
+        save: saveCart,
+        add: addToCartItem,
+        count: function(){ return cartCount(loadCart()); }
+      };
+    })();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const overlay = document.getElementById('search-overlay');
+        const toggle = document.getElementById('search-toggle');
+        const closeBtn = document.getElementById('search-close');
+        const form = document.getElementById('search-form');
+        const input = document.getElementById('search-input');
+        const resultsEl = document.getElementById('search-results');
+
+        // Build product index by scanning page
+        const products = [];
+        document.querySelectorAll('.product-item, .product-item-sm').forEach(function(el){
+            const titleEl = el.querySelector('.product-title') || el.querySelector('h3');
+            const title = titleEl ? titleEl.textContent.trim() : '';
+            const imgEl = el.querySelector('img') || el.querySelector('.thumbnail img');
+            const img = imgEl ? imgEl.src : '';
+            const priceEl = el.querySelector('.product-price') || el.querySelector('strong.product-price');
+            const price = priceEl ? priceEl.textContent.trim() : '';
+            // find link (anchor) if the root is an anchor or contains one
+            let url = '#';
+            if(el.tagName.toLowerCase()==='a' && el.href) url = el.href;
+            else {
+                const a = el.querySelector('a');
+                if(a && a.href) url = a.href;
+            }
+            if(title) products.push({title,img,price,url});
+        });
+
+        function openOverlay(){ overlay.style.display='block'; overlay.setAttribute('aria-hidden','false'); input.focus(); renderResults([]); }
+        function closeOverlay(){ overlay.style.display='none'; overlay.setAttribute('aria-hidden','true'); resultsEl.innerHTML=''; input.value=''; }
+
+        toggle && toggle.addEventListener('click', function(){ openOverlay(); });
+        closeBtn && closeBtn.addEventListener('click', function(){ closeOverlay(); });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeOverlay(); });
+
+        function renderResults(list, q){
+            if(!list || list.length===0){
+                resultsEl.innerHTML = q ? '<div class="search-no">ไม่พบสินค้าที่ตรงกับ "'+ (q||'') +'"</div>' : '<div class="search-no">พิมพ์คำค้นแล้วกดค้นหาเพื่อดูสินค้า</div>';
+                return;
+            }
+            const wrap = document.createElement('div');
+            wrap.className = 'search-results-grid';
+            list.forEach(function(p){
+                const a = document.createElement('a');
+                a.href = p.url || '#';
+                a.className = 'search-result';
+                a.innerHTML = '<img src="'+(p.img||'images/product-1.png')+'" alt="'+escapeHtml(p.title)+'"><div class="meta"><strong>'+escapeHtml(p.title)+'</strong><span style="color:#007bff">'+escapeHtml(p.price||'')+'</span></div>';
+                wrap.appendChild(a);
+            });
+            resultsEl.innerHTML = '';
+            resultsEl.appendChild(wrap);
+        }
+
+        function escapeHtml(text){ return (text||'').replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; }); }
+
+        form && form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const q = (input.value || '').trim().toLowerCase();
+            if(!q){ renderResults([], ''); return; }
+            const matched = products.filter(function(p){ return p.title && p.title.toLowerCase().indexOf(q) !== -1; });
+            renderResults(matched, q);
+        });
+    });
+    </script>
+	</body>
+
+</html>
