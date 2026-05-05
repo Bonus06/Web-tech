@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "firstName": "Alice",
+    "username": "alice@example.com",
+    "password": "$2b$10$usj.Xm87r649RjWLM8/NG.9AyEC08RW4PJWacOVSJvmWfujk46v2i",
+    "registeredAt": "2026-05-05T08:49:20.401Z"
+  },
+  {
+    "id": 2,
+    "firstName": "Bob",
+    "username": "bob@example.com",
+    "password": "$2b$10$amyOEUgO8qoUfqtAfxXPze9zWqiEUV2tHs0gyiP64Crpt6EHsCBw.",
+    "registeredAt": "2026-05-05T08:49:20.452Z"
+  },
+  {
+    "id": 3,
+    "firstName": "Charlie",
+    "username": "charlie@example.com",
+    "password": "$2b$10$/udck4BP1Xuqrohmd9gchuoOdV1F9IjC7hmrWNycD0Ce2xxTnO4IG",
+    "registeredAt": "2026-05-05T08:49:20.501Z"
+  },
+  {
+    "id": 4,
+    "firstName": "David",
+    "username": "david@example.com",
+    "password": "$2b$10$SXFWhCgv6fVe6FgPp.KEQOK3.yrV05ToZJJGAnBVA1rRTxKhxHBIW",
+    "registeredAt": "2026-05-05T08:49:20.550Z"
+  },
+  {
+    "id": 5,
+    "firstName": "Eve",
+    "username": "eve@example.com",
+    "password": "$2b$10$2LBIUZ0Fm1bz62cEXM8.jOFv3CcjWwmytYhfqoWplQPt3tNbSLVbW",
+    "registeredAt": "2026-05-05T08:49:20.599Z"
+  },
+  {
+    "id": 6,
+    "firstName": "Frank",
+    "username": "frank@example.com",
+    "password": "$2b$10$6XWI3fqKbSAk//W5/eZFs.SmY1K6IFtphwTlO2cLK.8kq7TlQTlfe",
+    "registeredAt": "2026-05-05T08:49:20.648Z"
+  },
+  {
+    "id": 7,
+    "firstName": "Grace",
+    "username": "grace@example.com",
+    "password": "$2b$10$J14p6AmeukAE56cFsg7N7enPniG.1D.J4rSKMhfXUrpn7nKn.erP6",
+    "registeredAt": "2026-05-05T08:49:20.697Z"
+  },
+  {
+    "id": 8,
+    "firstName": "Heidi",
+    "username": "heidi@example.com",
+    "password": "$2b$10$9nequt8N1RdUo25J.0HAxOEblaN/LSrSK.DpGC/4OVHygvszB8V9C",
+    "registeredAt": "2026-05-05T08:49:20.745Z"
+  },
+  {
+    "id": 9,
+    "firstName": "Ivan",
+    "username": "ivan@example.com",
+    "password": "$2b$10$UlfjWZZS3vtRMzJbf8TgG.aXCDSj3XvjL7qT9XBZwnPwObcYOpLdK",
+    "registeredAt": "2026-05-05T08:49:20.794Z"
+  },
+  {
+    "id": 10,
+    "firstName": "Judy",
+    "username": "judy@example.com",
+    "password": "$2b$10$96BenMwDz5RXFPS6yYcPIudBCsZxi0eNVeI0TLLjmyt7clZ5zRJsG",
+    "registeredAt": "2026-05-05T08:49:20.843Z"
+  }
+]

@@ -1,6 +1,11 @@
 const express = require('express');
+const fs = require('fs');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 const app = express();
 const PORT = 3000;
+const JWT_SECRET = 'super-secret-key';
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -41,6 +46,73 @@ app.get('/api/products', (req, res) => {
   
   // 5. If no category was provided, return the entire list of products
   res.json(products);
+});
+
+// Serve static files from the parent directory (frontend)
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../')));
+
+// Load users from auth_user.json
+let users = [];
+try {
+  const usersData = fs.readFileSync(path.join(__dirname, 'auth_user.json'), 'utf-8');
+  users = JSON.parse(usersData);
+} catch (err) {
+  console.log('Could not load auth_user.json, using empty users array');
+}
+
+// Mock login endpoint
+app.post('/api/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ success: false, message: 'Please provide email and password' });
+  }
+
+  const user = users.find(u => u.username === email || u.email === email);
+  
+  if (!user) {
+    return res.status(401).json({ success: false, message: 'Invalid email or password' });
+  }
+
+  const isMatch = await bcrypt.compare(password, user.password);
+  
+  if (!isMatch) {
+    return res.status(401).json({ success: false, message: 'Invalid email or password' });
+  }
+
+  const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '1h' });
+
+  res.status(200).json({ success: true, message: 'Login successful', token });
+});
+
+// Mock signup endpoint
+app.post('/api/signup', async (req, res) => {
+  const { name, email, password } = req.body;
+
+  if (!name || !email || !password) {
+    return res.status(400).json({ success: false, message: 'Please provide all required fields' });
+  }
+
+  const existingUser = users.find(u => u.username === email || u.email === email);
+  if (existingUser) {
+    return res.status(409).json({ success: false, message: 'Email already exists' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const newUser = { 
+    id: users.length + 1,
+    firstName: name,
+    username: email, 
+    email: email,
+    password: hashedPassword,
+    registeredAt: new Date().toISOString()
+  };
+  
+  users.push(newUser);
+  fs.writeFileSync(path.join(__dirname, 'auth_user.json'), JSON.stringify(users, null, 2));
+
+  res.status(201).json({ success: true, message: 'Signup successful' });
 });
 
 // Start the server
