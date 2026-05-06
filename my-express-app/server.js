@@ -115,6 +115,74 @@ app.post('/api/signup', async (req, res) => {
   res.status(201).json({ success: true, message: 'Signup successful' });
 });
 
+// Checkout endpoint
+app.post('/api/checkout', async (req, res) => {
+  const { cartItems, email, cardNumber } = req.body;
+  const errors = {};
+
+  try {
+    // 1. Check incoming cart items
+    if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {
+      errors.cartItems = 'Cart is empty or invalid.';
+    }
+
+    // 2. Check email using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      errors.email = 'Invalid email address format.';
+    }
+
+    // 3. Check 16-digit credit card number using regex
+    const cardRegex = /^\d{16}$/;
+    if (!cardNumber || !cardRegex.test(cardNumber.replace(/\s+/g, ''))) {
+      errors.cardNumber = 'Credit card must be exactly 16 digits.';
+    }
+
+    // If validation fails, throw custom error to be caught in the catch block
+    if (Object.keys(errors).length > 0) {
+      const error = new Error('Validation failed');
+      error.name = 'ValidationError';
+      error.fieldErrors = errors;
+      throw error;
+    }
+
+    // 4. Calculate the total
+    let total = 0;
+    for (const item of cartItems) {
+      const price = parseFloat(item.price) || 0;
+      const quantity = parseInt(item.quantity) || 1;
+      total += price * quantity;
+    }
+
+    // Save Order Step (Mocked)
+    // e.g. const order = await db.saveOrder({ cartItems, email, total })
+    
+    // Send success response (frontend should clear cart on success)
+    res.status(200).json({
+      success: true,
+      message: 'Order processed successfully.',
+      total: total
+    });
+  } catch (error) {
+    // Send 400 status with specific error messages for each failed field
+    // Frontend will NOT clear the user's cart on receiving 400
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({
+        success: false,
+        message: 'Checkout failed. Please check the fields.',
+        errors: error.fieldErrors
+      });
+    }
+
+    // Catch-all for any other unexpected errors during Save Order
+    res.status(400).json({
+      success: false,
+      message: 'An error occurred while saving the order.',
+      error: error.message
+    });
+  }
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`✅ Server is running at http://localhost:${PORT}`);
