@@ -69,5 +69,24 @@
 	};
 	sitePlusMinus();
 
+	// Authentication & Logout logic
+	var handleAuthState = function() {
+		var token = localStorage.getItem('token');
+		if (token) {
+			var userLinks = document.querySelectorAll('.custom-navbar-cta a[href="login.html"]');
+			userLinks.forEach(function(link) {
+				link.href = '#';
+				link.innerHTML = '<span class="fa fa-sign-out-alt" style="color: white; font-size: 1.2rem;" title="Logout"></span>';
+				link.addEventListener('click', function(e) {
+					e.preventDefault();
+					if(confirm('Are you sure you want to log out?')) {
+						localStorage.removeItem('token');
+						window.location.href = 'index.html';
+					}
+				});
+			});
+		}
+	};
+	handleAuthState();
 
 })()
