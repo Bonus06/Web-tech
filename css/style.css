@@ -91,7 +91,12 @@ a {
         margin-left: 40px !important; } }
     .custom-navbar .custom-navbar-cta li {
       margin-left: 0px;
-      margin-right: 0px; }
+      margin-right: 0px;
+      display: flex;
+      align-items: center; }
+      .custom-navbar .custom-navbar-cta li a {
+        display: flex;
+        align-items: center; }
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
 
