@@ -1,8 +1,9 @@
 const orderRepository = require('../repositories/orderRepository');
 const userRepository = require('../repositories/userRepository');
+const productRepository = require('../repositories/productRepository');
 
 class CheckoutService {
-  async processCheckout(cartItems, email, cardNumber) {
+  async processCheckout(userId, cartItems, email, cardNumber) {
     const errors = {};
 
     // 1. Check incoming cart items
@@ -22,6 +23,33 @@ class CheckoutService {
       errors.cardNumber = 'Credit card must be exactly 16 digits.';
     }
 
+    // 4. Calculate the total securely and validate items
+    let total = 0;
+    const validatedItems = [];
+    
+    if (!errors.cartItems) {
+      const products = productRepository.getAllProducts();
+      for (let i = 0; i < cartItems.length; i++) {
+        const item = cartItems[i];
+        const quantity = parseInt(item.quantity);
+        
+        if (isNaN(quantity) || quantity <= 0) {
+          errors[`cartItems[${i}].quantity`] = 'Quantity must be a positive integer.';
+          continue;
+        }
+
+        const product = products.find(p => p.id === parseInt(item.id));
+        if (!product) {
+          errors[`cartItems[${i}].id`] = 'Product not found.';
+          continue;
+        }
+
+        const itemTotal = product.price * quantity;
+        total += itemTotal;
+        validatedItems.push({ id: product.id, quantity, itemTotal });
+      }
+    }
+
     // If validation fails, throw custom error
     if (Object.keys(errors).length > 0) {
       const error = new Error('Validation failed');
@@ -30,38 +58,11 @@ class CheckoutService {
       throw error;
     }
 
-    // 4. Calculate the total
-    let total = 0;
-    for (const item of cartItems) {
-      const price = parseFloat(item.price) || 0;
-      const quantity = parseInt(item.quantity) || 1;
-      total += price * quantity;
-    }
-
-    // Save Order Step (Simulated Microservice Communication)
-    // We are replacing the direct repository call with a network call (fetch).
-    let userId = null;
-    try {
-      const response = await fetch(`http://user-service/api/verify?email=${encodeURIComponent(email)}`);
-      if (response.ok) {
-        const userData = await response.json();
-        userId = userData.id;
-      } else {
-        console.warn('User service responded with an error status');
-      }
-    } catch (error) {
-      console.error('Simulated microservice fetch failed:', error.message);
-      // In a real scenario, you'd handle this failure (e.g., throw error, circuit breaker, etc.)
-    }
-
+    // Save Order Step
     const savedOrders = [];
-    for (const item of cartItems) {
-      const price = parseFloat(item.price) || 0;
-      const quantity = parseInt(item.quantity) || 1;
-      const itemTotal = price * quantity;
-      
+    for (const item of validatedItems) {
       try {
-        const orderId = await orderRepository.saveOrder(userId, item.id, quantity, itemTotal);
+        const orderId = await orderRepository.saveOrder(userId, item.id, item.quantity, item.itemTotal);
         savedOrders.push(orderId);
       } catch (err) {
         console.error('Error inserting order:', err.message);

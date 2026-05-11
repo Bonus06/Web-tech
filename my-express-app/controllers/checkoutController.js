@@ -4,7 +4,8 @@ class CheckoutController {
   async checkout(req, res) {
     try {
       const { cartItems, email, cardNumber } = req.body;
-      const result = await checkoutService.processCheckout(cartItems, email, cardNumber);
+      const userId = req.user.id; // Added by authMiddleware
+      const result = await checkoutService.processCheckout(userId, cartItems, email, cardNumber);
       
       res.status(200).json({
         success: true,
